@@ -129,19 +129,17 @@ const Gallery = () => {
         <>
             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <Box maxWidth='xl' sx={{ width: '100%', marginBottom: '40px' }} className='px-2 md:px-10'>
-                    <Typography variant='h4' color='primary' component='h2' >Our Gallery</Typography>
+                    <Typography variant='h5' color='primary' component='h2' >Our Gallery</Typography>
 
                     <Box sx={{ width: '100%' }}>
                         <Stepper nonLinear orientation="vertical" activeStep={activeStep}>
                             {galleryContent.map((label, index) => {
-                                console.log(label);
-                                console.log('this is the inded:', index);
                                 return (
                                     <Step key={index} completed={completed[index]}>
                                         <StepButton icon={<Circle color={`${index === activeStep? 'primary': 'secondary'}`}/>} sx={{color: 'primary'}} onClick={handleStep(index)}>
                                             {
                                                 <ImageListItem key="Subheader" >
-                                                    <Typography variant='h5' className='py-3' component="h3">{label.header}</Typography>
+                                                    <Typography variant='h6' className='py-3' component="h3">{label.header}</Typography>
                                                 </ImageListItem>
                                             }
                                         </StepButton>

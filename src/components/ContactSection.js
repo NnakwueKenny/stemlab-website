@@ -1,5 +1,5 @@
-import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
-import React from 'react'
+import { Button, Card, CardActionArea, CardActions, CardContent, Typography } from '@mui/material'
+import React from 'react';
 
 const ContactSection = () => {
 
