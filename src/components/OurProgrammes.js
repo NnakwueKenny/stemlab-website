@@ -36,7 +36,7 @@ const ExpandableCard = ({item}) => {
 
     return (
         <Box>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
                 <CardHeader
                     action={
                         <>
@@ -116,22 +116,22 @@ const ExpandableCard = ({item}) => {
 
 const programmesContent = [
     {
+        name: 'YOUNG INNOVATORS CLUB (YIC)',
+        content: ` The young innovators club is a community and a tech ecosystem built
+            to identify young innovators minds from public schools, mentors and provide
+            them platform to scale their talents. It’s a bi-weekly outreach to public
+            school to identify talents in disadvantaged communities.
+            (Discard any mussels that don&apos;t open.)
+        `,
+        img: 'https://images.pexels.com/photos/12662899/pexels-photo-12662899.jpeg?auto=compress&cs=tinysrgb&w=600'
+    },
+    {
         name: 'MATA A FASAHA',
         content: ` From AI to coding, 3D printing and even female entrepreneurs.
             We have built a community for the indigenous Hausa tech innovators
             that allows talented Hausa women in tech to get to know and experience
             innovations first hand. Above all we understand that building network
             will support each lady to grow, integrate and become part of the tech world.
-            (Discard any mussels that don&apos;t open.)
-        `,
-        img: 'https://images.pexels.com/photos/12662899/pexels-photo-12662899.jpeg?auto=compress&cs=tinysrgb&w=600'
-    },
-    {
-        name: 'YOUNG INNOVATORS CLUB (YIC)',
-        content: ` The young innovators club is a community and a tech ecosystem built
-            to identify young innovators minds from public schools, mentors and provide
-            them platform to scale their talents. It’s a bi-weekly outreach to public
-            school to identify talents in disadvantaged communities.
             (Discard any mussels that don&apos;t open.)
         `,
         img: 'https://images.pexels.com/photos/12662899/pexels-photo-12662899.jpeg?auto=compress&cs=tinysrgb&w=600'

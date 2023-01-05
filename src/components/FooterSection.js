@@ -34,6 +34,7 @@ const FooterSection = () => {
 
     return (
         <Box sx={{ }} ref={ref}>
+            <hr className="border-orange-500 sm:mx-auto" />
             <Paper sx={{ bottom: 0, left: 0, right: 0, padding: 3 }} elevation={1} py={2}>
                 <Container sx={{ display: 'flex', flexDirection: { xs: 'column' }, justifyContent: 'center' }} className="sm:flex sm:items-center sm:justify-between">
                     <Box className='w-full flex flex-col md:flex-row gap-y-4 items-center justify-between py-3'>
