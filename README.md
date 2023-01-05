@@ -14,5 +14,5 @@ LinkedIn: ()
 
 ## Contributors
 
-Kenechukwu Nnakwue - @NnakwueKenny
-Faruq Hassan - @Farex4sure
+- Kenechukwu Nnakwue - @NnakwueKenny
+- Faruq Hassan - @Farex4sure
