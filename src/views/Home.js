@@ -1,66 +1,15 @@
-import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Container, Grid, IconButton, ListItem, Paper, Typography } from '@mui/material';
+import { Box, Card, Container } from '@mui/material';
 import React, { useContext, useState } from 'react';
 // import { Link } from 'react-router-dom';
 
-import Carousel from 'react-material-ui-carousel';
-import About from '../components/About';
-import Services from '../components/Services';
+import AboutSection from '../components/AboutSection';
+import ContactSection from '../components/ContactSection';
+import FooterSection from '../components/FooterSection';
+import HeroCarousel from '../components/HeroCarousel';
+import ServicesSection from '../components/ServicesSection';
 // import heroIcon from '../images/hero-icon-1.svg'
 
-function HeroCarousel()
-{
-    var items = [
-        {
-            name: "We Are An Ecosystem Built To Support ICT Focused Tech Entrepreneurs And Young Individuals.",
-            img: "https://images.pexels.com/photos/4508748/pexels-photo-4508748.jpeg?auto=compress&cs=tinysrgb&w=600",
-            icon: '../images/hero-icon-1.svg'
-        },
-        {
-            name: "We Are An Ecosystem Built To Support ICT Focused Tech Entrepreneurs And Young Individuals.",
-            img: "https://images.pexels.com/photos/5576311/pexels-photo-5576311.jpeg?auto=compress&cs=tinysrgb&w=600",
-            icon: '../images/hero-icon-1.svg'
-        },
-        {
-            name: "We Are An Ecosystem Built To Support ICT Focused Tech Entrepreneurs And Young Individuals.",
-            img: "https://images.pexels.com/photos/7742589/pexels-photo-7742589.jpeg?auto=compress&cs=tinysrgb&w=600",
-            icon: '../images/hero-icon-1.svg'
-        }
-    ]
-
-    return (
-        <Carousel >
-            {
-                items.map( (item, i) => <CarouselItem key={i} item={item} /> )
-            }
-        </Carousel>
-    )
-}
-
-function CarouselItem({item}) {
-    return (
-        <div className='h-[450px] md:h-[550px]'>
-            <Paper elevation={3} sx={{height: '100%'}} variant="outlined" className='relative'>
-                <Box className='absolute w-full h-full flex flex-col gap-8 items-center justify-center text-gray-400 md:text-white text-center px-8 md:px-16 font-semibold' sx={{zIndex: 'tooltip'}}>
-                    <Typography variant='h4' component='h2'>{item.name}</Typography>
-                    {/*item.icon*/}
-                    <img alt='' src='../images/hero-icon-1.svg' />
-                    <Button className="CheckButton" variant='outlined' >
-                        Learn More
-                    </Button>
-                </Box>
-                <div className='absolute top-0 w-full h-full'>
-                    <div className='relative w-full h-full'>
-                        <div className='absolute h-full w-full bg-gray-300 md:bg-gray-600 md:bg-opacity-75 bg-opacity-0'></div>
-                        <img alt='hero-carousel-background' src={item.img} className='w-full h-full hidden md:block'/>
-                    </div>
-                </div>
-            </Paper>
-        </div>
-    )
-}
-
 const Home = () => {
-
     return (
         <div>
             <HeroCarousel />
@@ -68,15 +17,24 @@ const Home = () => {
 
                 {/* Services Section */}
                 <Box>
-                    <Services />
+                    <ServicesSection />
                 </Box>
                 
                 {/* About Us Section */}
-                <Box id='about-us'>
-                    <About />
+                <Box >
+                    <AboutSection />
                 </Box>
                 
+                {/* Contact Us Section */}
+                <Box id='contact-us' sx={{py: 5}}>
+                    <ContactSection />
+                </Box>
             </Container>
+            
+            {/* Footer Section */}
+            <Box id='contact-us' sx={{pb: 1}}>
+                <FooterSection />
+            </Box>
         </div>
     )
 

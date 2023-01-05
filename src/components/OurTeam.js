@@ -1,5 +1,5 @@
-import { Link, Typography } from '@mui/material'
-import { Box } from '@mui/system'
+import { CardBody, CardFooter } from '@material-tailwind/react';
+import { Box, Card, CardHeader, CardMedia, Link, Typography } from '@mui/material';
 import React from 'react';
 import LightTooltip from './LightTooltip';
 
@@ -7,13 +7,12 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-import { Card, CardHeader, CardBody, CardFooter, Tooltip, } from "@material-tailwind/react";
-
-const About = () => {
+const OurTeam = () => {
     const teamMembers = [
         {
             name: 'Prince Achoja',
             role: 'CEO / Executive Director',
+            img: 'https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=600',
             socialMedia: [
                 {
                     platform: 'twitter',
@@ -41,6 +40,7 @@ const About = () => {
         {
             name: 'Salma Gambo',
             role: 'Admin Lead',
+            img: 'https://images.pexels.com/photos/5717550/pexels-photo-5717550.jpeg?auto=compress&cs=tinysrgb&w=600',
             socialMedia: [
                 {
                     platform: 'twitter',
@@ -68,6 +68,7 @@ const About = () => {
         {
             name: 'Muhammad Abubakar',
             role: 'Internal Strategic Lead',
+            img: 'https://images.pexels.com/photos/7793664/pexels-photo-7793664.jpeg?auto=compress&cs=tinysrgb&w=600',
             socialMedia: [
                 {
                     platform: 'twitter',
@@ -95,6 +96,7 @@ const About = () => {
         {
             name: 'Kenechukwu Nnakwue',
             role: 'Technology Lead',
+            img: 'https://images.pexels.com/photos/7681016/pexels-photo-7681016.jpeg?auto=compress&cs=tinysrgb&w=600',
             socialMedia: [
                 {
                     platform: 'twitter',
@@ -122,6 +124,7 @@ const About = () => {
         {
             name: 'Muhammad Garba',
             role: 'Graphics Designer',
+            img: 'https://images.pexels.com/photos/933255/pexels-photo-933255.jpeg?auto=compress&cs=tinysrgb&w=600',
             socialMedia: [
                 {
                     platform: 'twitter',
@@ -149,6 +152,7 @@ const About = () => {
         {
             name: 'Faruq Hassan',
             role: 'Software Lead',
+            img: 'https://images.pexels.com/photos/5717550/pexels-photo-5717550.jpeg?auto=compress&cs=tinysrgb&w=600',
             socialMedia: [
                 {
                     platform: 'twitter',
@@ -174,18 +178,8 @@ const About = () => {
             ]
         },
     ]
-  return (
-    <>
-       <Typography id='about-us' variant='h4' component='h2' color='primary' className='text-center pt-6 pb-3'>
-            About us
-        </Typography>
 
-        <Typography variant='span' component='p' className='text-center text-gray-400 py-2 px-2 text-justify'>
-            We are an ecosystem built to support ICT focused tech entrepreneurs and young individuals integrating the STEM pedagogy.
-            We have built a framework for innovative minds create great solutions, enterprises and companies to solve most of the biggest challenge in the society. We created a company focused in creating an enabling environment for most startups.
-            STEMLAB was established to empower, promote and position Africa especially Nigeria in technology and startup ecosystem with a vision of using technology as a strategy to combat unemployment.
-        </Typography>
-
+    return (
         <Box>
             <Typography variant='h5' component='h2' color='secondary' className='text-center pt-6 pb-3'>
                 Meet Our Team
@@ -194,9 +188,12 @@ const About = () => {
                 {
                     teamMembers.map(item => (
                         <Card>
-                            <CardHeader floated={false} className="h-80">
-                                <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600" alt="profile-picture" />
-                            </CardHeader>
+                            <CardMedia
+                                component="img"
+                                height="194"
+                                image={item.img}
+                                alt="Paella dish"
+                            />
                             <CardBody className="text-center mb-auto">
                                 <Typography variant="h5" color="blue-gray" className="mb-2">
                                     {item.name}
@@ -221,8 +218,7 @@ const About = () => {
                 }
             </Box>
         </Box>
-    </>
-  )
+    )
 }
 
-export default About
+export default OurTeam
